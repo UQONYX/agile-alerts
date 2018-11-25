@@ -13,7 +13,7 @@ It's a win-win: no more texting, emailing, and back-and-forth for either of you.
 <img src="https://i.imgur.com/oWRJcux.pngs" width="800">
 
 ### Your Contractors Get Notified
-<img src="https://i.imgur.com/i7Avivw.jpgs" width="200" border="2">
+<img src="https://i.imgur.com/i7Avivw.jpgs" width="200" style="padding:1px;border:thin solid black;">
 
 
 ### Credits
