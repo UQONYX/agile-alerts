@@ -10,7 +10,7 @@ As soon as you post a new bid/job, your approved list of contractors will get te
 It's a win-win: no more texting, emailing, and back-and-forth for either of you. Get your bids/jobs filled up super fast. 
 
 ### Step 1: Add a new posting
-![new posting](https://imgur.com/oWRJcux)
+![new posting](https://i.imgur.com/oWRJcux.png)
 
 ### Credits
 This project was initially built using the open-source boilerplate MEAN.js project
