@@ -1,0 +1,20 @@
+<section>
+  <div class="page-header">
+    <h1>Job Postings</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="article.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+        <span ng-if="!article.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+      <p class="list-group-item-text" >{{article.city}}, New Jersey</p>
+      <p class="list-group-item-text" data-ng-bind="article.schedule"></p>
+      <p class="list-group-item-text" >${{article.pay}}/hr</p>
+    </a>
+  </div>
+</section>
