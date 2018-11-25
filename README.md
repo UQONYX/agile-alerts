@@ -10,10 +10,11 @@ As soon as you post a new bid/job, your approved list of contractors will get te
 It's a win-win: no more texting, emailing, and back-and-forth for either of you. Get your bids/jobs filled up super fast. 
 
 ### Add a new posting
-![new posting](https://i.imgur.com/oWRJcux.png)
+<img src="https://i.imgur.com/oWRJcux.pngs" width="300">
 
 ### Your Contractors Get Notified
-![text notification](https://i.imgur.com/i7Avivw.jpgs)
+<img src="https://i.imgur.com/i7Avivw.jpgs" width="200">
+
 
 ### Credits
 This project was initially built using the open-source boilerplate MEAN.js project
