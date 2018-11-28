@@ -20,6 +20,8 @@
       <p class="list-group-item-text" >{{article.city}}, New Jersey</p>
       <p class="list-group-item-text" data-ng-bind="article.schedule"></p>
       <p class="list-group-item-text" >${{article.pay}}/hr</p>
+      
+      <p><span class="badge bg-danger">{{article.applicants.length}}</span></p>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.articles.$resolved && !vm.articles.length">

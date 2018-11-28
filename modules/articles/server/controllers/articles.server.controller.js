@@ -58,6 +58,24 @@ exports.read = function (req, res) {
   res.json(article);
 };
 
+exports.apply = function (req,res,)
+{
+  var article = req.article;
+  var user = req.user;
+  var userId = user.id;
+  console.log(user.id);
+  article.applicants.push({"applicantID":userId});
+  article.save(function (err) {
+    if (err) {
+      console.log(err);
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(article);
+    }
+  });
+};
 /**
  * Update an article
  */

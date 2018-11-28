@@ -44,8 +44,12 @@ var ArticleSchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
-  }
-});
+  },
+  applicants: [{ "applicantID": String }]
+},
+  {
+    usePushEach: true
+  });
 
 ArticleSchema.statics.seed = seed;
 

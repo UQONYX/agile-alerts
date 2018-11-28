@@ -13,6 +13,9 @@
     }, {
       update: {
         method: 'PUT'
+      },
+      apply:{
+        method: 'PATCH'
       }
     });
 
@@ -20,11 +23,31 @@
       createOrUpdate: function () {
         var article = this;
         return createOrUpdate(article);
+      },
+      apply: function(){
+        var article = this;
+        return apply(article);
       }
     });
 
     return Article;
+    function apply (article)
+    {
+      if (article._id){
+        console.log("got here");
+        return article.$apply(onSuccess,onError);
+      }
+      function onSuccess(article) {
+        // Any required internal processing from inside the service, goes here.
+      }
 
+      // Handle error response
+      function onError(errorResponse) {
+        var error = errorResponse.data;
+        // Handle error internally
+        handleError(error);
+      }
+    }
     function createOrUpdate(article) {
       if (article._id) {
         return article.$update(onSuccess, onError);

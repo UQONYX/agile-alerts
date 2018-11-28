@@ -15,6 +15,7 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    vm.apply = apply;
 
     // Remove existing Article
     function remove() {
@@ -24,6 +25,21 @@
           Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Article deleted successfully!' });
         });
       }
+    }
+    function apply() {
+      vm.article.apply()
+        .then(successCallback)
+        .catch(errorCallback);
+
+      function successCallback(res) {
+        $state.go('admin.articles.list'); // should we send the User to the list or the updated Article's view?
+        Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Article saved successfully!' });
+      }
+
+      function errorCallback(res) {
+        Notification.error({ message: res.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Article save error!' });
+      }
+      
     }
 
     // Save Article

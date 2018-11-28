@@ -47,6 +47,18 @@
         resolve: {
           articleResolve: getArticle
         }
+      })
+      .state('admin.articles.apply', {
+        url: '/:articleId/apply',
+        templateUrl: '/modules/articles/client/views/admin/form-article.client.view.html',
+        controller: 'ArticlesAdminController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['admin'],
+        },
+        resolve: {
+          articleResolve: getArticle
+        }
       });
   }
 
