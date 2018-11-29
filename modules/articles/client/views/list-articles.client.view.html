@@ -3,7 +3,7 @@
     <h1>Job Postings</h1>
   </div>
   <div class="list-group">
-    <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
+    <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item d-flex justify-content-between align-items-center">
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="article.created | date:'mediumDate'"></span>
@@ -12,9 +12,9 @@
         <span ng-if="!article.user">Deleted User</span>
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
-      <p class="list-group-item-text" >{{article.city}}, New Jersey</p>
+      <span class="badge bg-success badge-pill">${{article.pay}}/hr</span>
+      <p class="list-group-item-text">{{article.city}}, New Jersey</p>
       <p class="list-group-item-text" data-ng-bind="article.schedule"></p>
-      <p><span class="badge badge-success">${{article.pay}}/hr</span></p>
     </a>
   </div>
 </section>

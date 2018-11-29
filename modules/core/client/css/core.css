@@ -44,3 +44,9 @@ a:hover .header-profile-image {
 .angular-with-newlines {
   white-space: pre-wrap;
 }
+.bg-primary{
+  background-color: #337ab7 !important;
+}
+.bg-success{
+  background-color: #28a745 !important;
+}

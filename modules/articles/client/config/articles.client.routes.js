@@ -20,6 +20,15 @@
         controller: 'ArticlesListController',
         controllerAs: 'vm'
       })
+      .state('articles.apply', {
+        url: '/:articleId',
+        templateUrl: '/modules/articles/client/views/view-article.client.view.html',
+        controller: 'ArticlesController',
+        controllerAs: 'vm',
+        resolve: {
+          articleResolve: getArticle
+        }
+      })
       .state('articles.view', {
         url: '/:articleId',
         templateUrl: '/modules/articles/client/views/view-article.client.view.html',
@@ -27,7 +36,8 @@
         controllerAs: 'vm',
         resolve: {
           articleResolve: getArticle
-        },
+        }
+        ,
         data: {
           pageTitle: '{{ articleResolve.title }}'
         }

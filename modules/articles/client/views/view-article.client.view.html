@@ -12,4 +12,9 @@
     </em>
   </small>
   <p class="lead angular-with-newlines" ng-bind="vm.article.schedule"></p>
+  <div class="pull-right">
+    <a ng-show="vm.article._id" class="btn btn-primary" ng-click="vm.apply()">
+      <i class="glyphicon glyphicon-edit"><p>Apply</p></i>
+    </a>
+  </div>
 </section>
